@@ -1,10 +1,24 @@
-# START HERE 
+# GET STARTED 
 
 Techstack: 
 
-Base: Vite + React + Typescript
-API: Axios (Could upgrade to tanstack query for caching functionalities)
+Base Framework: Vite + React + Typescript
+API: Axios
 Page Routing: React-Router v7 
+
+# RUNNING THE APP 
+
+`npm install`
+
+`npm run dev`
+
+# ASSUMPTIONS 
+
+# IMPROVEMENTS
+
+API - Could upgrade to tanstack query for caching functionalities.
+
+CSS - Could upgrade to emotionCSS for js-in-css functionalities, this will be able to handle the css changes between the mobile and desktop view better and allow for better organization (certain components share similar font size /colors, if we could store this in a stylesheet and reference it, we can easily change colour scheme and fonts without much refactoring) 
 
 # React + TypeScript + Vite
 
