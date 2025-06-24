@@ -4,6 +4,7 @@ import axios from 'axios';
 import { MOCK_COMBINED_WEATHER_API } from "./mock-data";
 import Weather from "./weather-app/weather";
 import SearchHistory from "./weather-app/search-history";
+import { formatCity, formatCountry, UTCtoDateTime } from "../utils/utils";
 
 const MOCK_DATA = MOCK_COMBINED_WEATHER_API;             
 
@@ -44,17 +45,17 @@ export default function WeatherApp () {
                     // console.log(JSON.stringify(response1.data));
                     console.log(response1.data);
                     if (response1.data){
-        
-                        const timestamp = new Date(response1.data.current.dt * 1000).toLocaleString('en-SG', {year: 'numeric', month: '2-digit', day: '2-digit',  hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }).replace(/\//g, '-').replace(/,/g, '');
+                        const timestamp = UTCtoDateTime(response1.data.current.dt);
+                        // const timestamp = new Date(response1.data.current.dt * 1000).toLocaleString('en-SG', {year: 'numeric', month: '2-digit', day: '2-digit',  hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }).replace(/\//g, '-').replace(/,/g, '');
                         // new Date().toLocaleString('en-SG', {year: 'numeric', month: '2-digit', day: '2-digit',  hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }).replace(/\//g, '-')
                         console.log(timestamp);
 
-                        setWeather({city, country, timestamp, ...response1.data})
-                        console.log(`saving weather.... `, {city, country, ...response1.data})
+                        setWeather({city: formatCity(city), country: formatCountry(country), timestamp, ...response1.data})
+                        console.log(`saving weather.... `, {city: formatCity(city), country: formatCountry(country), ...response1.data})
                         setHistory([
                             [
-                                city, 
-                                country, 
+                                formatCity(city), 
+                                formatCountry(country),
                                 timestamp
                             ],
                             ...history
@@ -85,9 +86,8 @@ export default function WeatherApp () {
     }
 
     const handleDelete = (index: number) => () => {
-        console.log(`handleDelete, ${index}`)
-        let oldHistory = [...history]; 
-        let newHistory = oldHistory.filter((_,key) => key!=index)
+        console.log(`handleDelete, ${index}`) 
+        const newHistory = [...history].filter((_,key) => key!=index)
         setHistory(newHistory);
     }
 

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { ThemeContext } from "../../ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 import searchIcon from "../../assets/search.png";
 import deleteIcon from "../../assets/delete.png";
 

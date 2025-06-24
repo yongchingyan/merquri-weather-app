@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 import searchIcon from "../../assets/search.png";
 import deleteIcon from "../../assets/delete.png";
-import { MobileViewContext } from "../../MobileViewContext";
+import { MobileViewContext } from "../../context/MobileViewContext";
 
 export default function SearchHistory ({ history, onSubmit, handleDelete } : { history: string[][], onSubmit: (city: string, country: string) => Promise<boolean>, handleDelete: (index: number) => () => void }) {
     const {theme} = useContext(ThemeContext);

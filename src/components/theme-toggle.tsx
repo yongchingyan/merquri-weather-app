@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import { ThemeContext } from "../ThemeContext"
+import { ThemeContext } from "../context/ThemeContext"
 import bgDark from "../assets/bg-dark.png"
 import bgLight from "../assets/bg-light.png"
 

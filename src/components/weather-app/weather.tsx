@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import type { MOCK_COMBINED_WEATHER_API } from "../mock-data";
-import { ThemeContext } from "../../ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 import sunIcon from "../../assets/sun.png";
-import { MobileViewContext } from "../../MobileViewContext";
+import { MobileViewContext } from "../../context/MobileViewContext";
 
 export default function Weather ({weather, children}: {weather: typeof MOCK_COMBINED_WEATHER_API, children: React.ReactNode}) {
     const {theme} = useContext(ThemeContext);
