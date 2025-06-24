@@ -27,7 +27,6 @@ export const MobileViewContextProvider = ({children}: {children: React.ReactNode
 
     return (
         <MobileViewContext.Provider value={mobileView}>
-            mobile: {mobileView? "ye" : "nah"}
             {children}
         </MobileViewContext.Provider>
     )

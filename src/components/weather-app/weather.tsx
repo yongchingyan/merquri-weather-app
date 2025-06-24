@@ -2,7 +2,10 @@ import { useContext } from "react";
 import type { MOCK_COMBINED_WEATHER_API } from "../mock-data";
 import { ThemeContext } from "../../context/ThemeContext";
 import sunIcon from "../../assets/sun.png";
+import cloudIcon from "../../assets/cloud.png";
 import { MobileViewContext } from "../../context/MobileViewContext";
+
+const SUN_COND = ["01d", "02d", "10d"];
 
 export default function Weather ({weather, children}: {weather: typeof MOCK_COMBINED_WEATHER_API, children: React.ReactNode}) {
     const {theme} = useContext(ThemeContext);
@@ -38,7 +41,12 @@ export default function Weather ({weather, children}: {weather: typeof MOCK_COMB
                         </span>
                     </>
                     }
-                    <img src={sunIcon} alt="sun"/>
+                    {   
+                        SUN_COND.indexOf(weather.current.weather[0].icon) == -1 
+                        ? <img src={cloudIcon} alt="cloud"/>
+                        : <img src={sunIcon} alt="sun"/>
+                        
+                    }
                 </div>
             }
             {children}
