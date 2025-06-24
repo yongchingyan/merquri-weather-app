@@ -2,14 +2,17 @@ import './App.css'
 import WeatherApp from './components/weather-app'
 import { ThemeContextProvider } from './ThemeContext'
 import ThemeToggle from './components/theme-toggle'
+import { MobileViewContextProvider } from './MobileViewContext'
 
 function App() {
   return (
-    <ThemeContextProvider>
-        <ThemeToggle>
-          <WeatherApp/>
-        </ThemeToggle>
-    </ThemeContextProvider>
+    <MobileViewContextProvider>
+      <ThemeContextProvider>
+          <ThemeToggle>
+            <WeatherApp/>
+          </ThemeToggle>
+      </ThemeContextProvider>
+    </MobileViewContextProvider>
   )
 }
 

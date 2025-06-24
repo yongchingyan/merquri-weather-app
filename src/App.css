@@ -20,9 +20,9 @@ body {
 }
 
 .container {
-  border: 1px solid red;
   margin: 0 auto;
   max-width: 700px;
+  min-width: 360px;
 }
 
 .themeButton {
@@ -47,6 +47,10 @@ body {
   gap: 20px;
   width: 100%;
 
+  @media only screen and (max-width: 700px) {
+    gap: 10px;
+  }
+
   .searchbarField {
     display: flex;
     flex-direction: column; 
@@ -70,6 +74,13 @@ body {
       &:focus {
         outline: none;
       }
+
+      @media only screen and (max-width: 700px) {
+        height: 35px;
+        padding: 5px 10px 0;
+        border-radius: 8px;
+        font-size: 12px;
+      }
     }
 
     label {
@@ -83,6 +94,12 @@ body {
       top: -50px;
       left: 20px;
       color: rgba(0, 0, 0, 0.4);
+
+      @media only screen and (max-width: 700px) {
+        font-size: 8px;
+        left: 10px;
+        top: -34px;
+      }
     }
   }
 
@@ -90,6 +107,10 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
+
+    @media only screen and (max-width: 700px) {
+      gap: 10px;
+    }
   }
 
   .light input {
@@ -130,6 +151,17 @@ body {
     height: 34px;
     filter: invert();
     margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 700px) {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+
+    img{
+      width: 22.66666603088379px;
+      height: 22.66666603088379px;
+    }
   }
 }
 

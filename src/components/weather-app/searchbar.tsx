@@ -33,18 +33,18 @@ export default function Searchbar ({
         <>
         <div className={`searchbarContainer`}> 
             <div className={`${theme} searchbarField`}>
-                <input type="text" value={city} onChange={(e)=>{
+                <input id="city" name="city" type="text" value={city} onChange={(e)=>{
                     setError("");
                     setCity(e.target.value)
                 }}/>
-                <label>City</label>
+                <label htmlFor="city">City</label>
             </div>
             <div className={`${theme} searchbarField`}>
-                <input type="text" value={country} onChange={(e)=>{
+                <input id="country" name="country" type="text" value={country} onChange={(e)=>{
                     setError("");
                     setCountry(e.target.value)
                 }}/>
-                <label>Country</label>
+                <label htmlFor="country">Country</label>
             </div>
             <div className={`searchbarButtonContainer`}>
                 <button className={`${theme} searchbarButton`} onClick={handleSubmit}> 

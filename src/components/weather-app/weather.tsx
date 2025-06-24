@@ -16,7 +16,7 @@ export default function Weather ({weather, children}: {weather: typeof MOCK_COMB
                     <span className="row">
                         <span className={theme} id="place">{weather.city}, {weather.country}</span>
                         <span className={`${theme} details`}>{weather.timestamp}</span>
-                        <span className={`${theme} details`}>Humidity: {weather.current.humidity}</span>
+                        <span className={`${theme} details`}>Humidity: {weather.current.humidity}%</span>
                         <span className={`${theme} details`}>{weather.current.weather[0].main}</span>
                     </span>
                     <img src={sunIcon} alt="sun"/>
