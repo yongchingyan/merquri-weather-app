@@ -9,15 +9,16 @@ Techstack:
 - Page Routing: `React-Router v7` (not required, but included for when project decides to expand from a single page application)
 -Theme / Mobile view switching: `React ES6 useContext` 
 - Git: https://git-fork.com/
+- Lint: `eslint`
 
 File directory: 
 
 - `src > main` - createRoot is called here
-- `src > App.tsx` -  Context Providers for Theme and Mobile View  is called here, implements <ThemeToggle/> and <WeatherApp/> components 
+- `src > App.tsx` -  Context Providers for Theme and Mobile View  is called here, implements `<ThemeToggle/>` and `<WeatherApp/>` components 
 - `src > App.css` - Main css file for all components
 - `src > context` -   MobileViewContext and ThemeContext are stored here. 
 - `src > component` - ThemeToggle, WeatherApp components stored here
-- `src > component > weather-app` WeatherApp's child component <Searchbar/>, <Weather/> , <SearchHistory> is stored here. 
+- `src > component > weather-app` WeatherApp's child component `<Searchbar/>`, `<Weather/>` , `<SearchHistory>` is stored here. 
 - `src > data` - Mock data for the OpenWeather api call is stored here
 - `src > utils > utils.tsx` - Various utility functions such as string formatter and UTC string to date time converter, are stored here.   
 - `src > assets` png is stored here 
@@ -54,7 +55,7 @@ There is a bit of mismatch between the original mockup and the Figma mockup, so 
 ## Search History
 
 - Clicking on "search" on an old record will create a new record at the top of the history list.
-- Timestamp format will be in the same format as the one shown in the <Weather/> component. 
+- Timestamp format will be in the same format as the one shown in the `<Weather/>` component. 
 
 ## CSS 
 
@@ -63,7 +64,7 @@ There is a bit of mismatch between the original mockup and the Figma mockup, so 
 
 - Where possible we would use the css `@media` query rule to change the appearance of the components when switching between Desktop and Mobile view 
 
-- Unless the component is drastically different like the <Weather/> component have 2 columns versus one column in mobile view then we will use MobileViewContext to load in a different component. 
+- Unless the component is drastically different like the `<Weather/>` component have 2 columns versus one column in mobile view then we will use MobileViewContext to load in a different component. 
 
 - CSS will use `px` instead of `rem` untis to follow the figma requirements 
 
@@ -77,7 +78,6 @@ There is a bit of mismatch between the original mockup and the Figma mockup, so 
 # IMPROVEMENTS
 
 - Could break the app.css file into smaller files. 
-
 - Could introduce emotionCss / js in css to handle dynamic css changes more neatly.
-
-- Could store the colour scheme and font sizes in a stylesheet and use SCSS / SASS / EmotionCss to reference the stylesheet, makes its easier to change colorscheme without much refactoring. 
+- Could store the colour scheme and font sizes in a stylesheet and use SCSS / SASS / EmotionCss to reference the stylesheet, makes its easier to change colorscheme without much refactoring.
+- Could write unit tests in react-testing-library / jest. 
