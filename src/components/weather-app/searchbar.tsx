@@ -33,14 +33,14 @@ export default function Searchbar ({
         <>
         <div className={`searchbarContainer`}> 
             <div className={`${theme} searchbarField`}>
-                <input id="city" name="city" type="text" value={city} onChange={(e)=>{
+                <input id="city" name="city" type="text" placeholder="Singapore" autoComplete="off" value={city} onChange={(e)=>{
                     setError("");
                     setCity(e.target.value)
                 }}/>
                 <label htmlFor="city">City</label>
             </div>
             <div className={`${theme} searchbarField`}>
-                <input id="country" name="country" type="text" value={country} onChange={(e)=>{
+                <input id="country" name="country" type="text" placeholder="SG" autoComplete="off" value={country} onChange={(e)=>{
                     setError("");
                     setCountry(e.target.value)
                 }}/>

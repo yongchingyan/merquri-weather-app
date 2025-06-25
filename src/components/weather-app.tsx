@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Searchbar from "./weather-app/searchbar";
 import axios from 'axios';
-import { MOCK_COMBINED_WEATHER_API } from "./mock-data";
+import { MOCK_COMBINED_WEATHER_API } from "../data/mock-data";
 import Weather from "./weather-app/weather";
 import SearchHistory from "./weather-app/search-history";
 import { formatCity, formatCountry, UTCtoDateTime } from "../utils/utils";
