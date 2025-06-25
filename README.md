@@ -72,8 +72,8 @@ There is a bit of mismatch between the original mockup and the Figma mockup, so 
 
 ![localhost_5173_ (1)](https://github.com/user-attachments/assets/593d87f3-6ba3-417a-ae94-6dfbd474da72)
 ![localhost_5173_ (2)](https://github.com/user-attachments/assets/01588a62-6503-4a90-b13d-731581404bbf)
-![localhost_5173_(iPhone 12 Pro)](https://github.com/user-attachments/assets/00863316-6186-4fbe-a5fc-346d71428ce7)
-![localhost_5173_(iPhone 12 Pro) (2)](https://github.com/user-attachments/assets/33f5af91-f64d-4751-9c13-3550223160f1)
+![localhost_5173_(iPhone 12 Pro) (4)](https://github.com/user-attachments/assets/f70de5d1-4121-4c68-92f5-39b98e3cbbe3)
+![localhost_5173_(iPhone 12 Pro) (3)](https://github.com/user-attachments/assets/da139e13-8860-4cfe-b94a-e45d610da7f0)
 
 # IMPROVEMENTS
 
