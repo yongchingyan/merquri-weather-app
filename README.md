@@ -1,11 +1,14 @@
 # GET STARTED 
 
+Hello! Thank you for reviewing my technical assessment! 
+
 Techstack: 
 
 Base Framework: `Vite` + `React` + `Typescript`
 API: `Axios`
 Page Routing: `React-Router v7` (not required, but included for when project decides to expand from a single page application)
-Handling theme switching: `React ES6 useContext` 
+Theme / Mobile view switching: `React ES6 useContext` 
+Git: https://git-fork.com/
 
 File directory: 
 
@@ -61,6 +64,8 @@ There is a bit of mismatch between the orginal mockup and the figma mockup, so I
 - Where possible we would use the css @media query rule to change the appearance of the components when switching between Desktop and Mobile view 
 
 - Unless the component is drastically different like Weather component have 2 columns versus one column in mobile view then we will use MobileViewContext to load in a different html component. 
+
+- CSS will use `px` instead of `rem` untis to follow the figma requirements 
 
 # PREVIEW
 
