@@ -16,7 +16,7 @@ export default function WeatherApp () {
     const onSubmit = async (city: string, country: string) => {
         // console.log(`Searching for... ${city}, ${country}`)
         if (!city || !country){
-            setError("Please fill in both fields.");
+            setError("Please fill in both fields");
             return false;
         }
             
